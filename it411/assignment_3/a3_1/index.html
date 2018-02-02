@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3 a3_1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Patricia Parker">
+    <meta name="robots" content="noindex, nofollow">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body>
+  <header class="jumbotron">
+    <img src="../sftwear.png" class="center-block">
+  </header>
+  <div class="container">
+  <h1 class="text-center">a3_1</h1> 
+    
+  <hr />
+
+  <div>
+    <p class="odd">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue vestibulum       elementum. Ut et turpis sit amet nisi vehicula aliquam. <a   href="http://www.google.com">Link To Google!</a>Integer imperdiet mauris a nisl lobortis cursus mattis est blandit. Sed a vulputate risus. Donec adipiscing sagittis libero, sed tristique nisi gravida vitae. Mauris eu justo tellus, eget consectetur mauris. Phasellus ut nisl vitae ipsum fringilla dignissim. Pellentesque commodo, libero in vulputate aliquam, mi tortor dignissim odio, ac luctus justo turpis non massa. Vivamus vitae laoreet est. Donec eleifend pharetra leo, sit amet vulputate quam ornare nec. Phasellus ut fermentum enim.
+    </p>
+    <p class="even">
+    Curabitur aliquet consequat elementum. Duis neque justo, cursus id rutrum eu, lobortis a justo. Nam ornare ante ac massa tincidunt commodo. Donec imperdiet dictum augue ac convallis. Nullam magna felis, imperdiet nec laoreet sed, dignissim et mauris. Praesent molestie ultrices gravida. Vivamus mauris ligula, gravida non hendrerit euismod, dictum et lorem. Ut euismod, augue eu commodo adipiscing, odio magna aliquam tellus, eu malesuada felis leo nec eros. Vivamus in elit justo, eget tincidunt elit. <a href="http://www.google.com">Link To Google!</a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies, nulla eget porttitor hendrerit, sem purus tincidunt ligula, et vestibulum risus purus eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta nunc eget sem dapibus tincidunt.
+    </p>
+  </div>
+<script>
+    $(document).ready(function() {
+      // display the text in red on the paragraph with the class of even when mouse is located on text. 
+      $(".even").mouseenter(function() {
+        $(".even").css("color", "red");
+      });
+        
+      // display the text in blue on the paragraph with the class of even when mouse moves away from text.
+      $(".even").mouseleave(function() {
+        $(".even").css("color", "blue");
+      });
+        
+      // display message when paragraph with class of odd is double clicked on.
+      $(".odd").dblclick(function() {
+          alert('ouch');
+      }); // end double click
+        
+      // display message when mouse moves over a link. 
+      $('a').mouseover(function() {
+        alert('You moved the mouse over me!');
+      });
+    });
+</script>  
+</body>
+</html>
+
+    

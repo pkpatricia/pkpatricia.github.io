@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Patricia Parker">
+  <meta name="robots" content="noindex, nofollow">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+  <script>
+  $(function() {
+		
+		$("#tabs").tabs();
+		
+		$('#signup1').validate({
+                        submitHandler: function() {
+                            event.preventDefault();
+													var feetIninches = 12 * Number($("#feet").val());
+													
+													var inches = feetIninches + Number($("#inches").val());
+													
+													var height = Number(inches) * Number(inches);
+													
+													var bmi = (Number($("#pounds").val()) * 703) / Number(height);
+														
+													$('#results1').html("<h2> Your BMI: </h2>" + bmi.toFixed(2));
+                           
+                        }
+                  });
+		
+		$('#signup2').validate({
+                        submitHandler: function() {
+                            event.preventDefault();
+													var metersInCentimeters = Number($("#centimeters").val()) / 100;
+									
+													var height = Number(metersInCentimeters) * Number(metersInCentimeters);
+													
+													var bmi = Number($("#kilograms").val()) / Number(height);
+														
+													$('#results2').html("<h2> Your BMI: </h2>" + bmi.toFixed(2));
+                           
+                        }
+                  });
+	});
+</script>		
+  
+</head>
+	
+<body>
+<div class="wrap">
+<header class="headercolor">
+		<img src="../sftwearlogo2.png" class="center-block img-responsive"><br>
+</header>
+
+	<h1 class="text-center">JQuery</h1>
+	
+	<div id="tabs">
+		<ul class="list-inline">
+			<li><a href="#tabs-1">Imperial BMI</a></li>
+			<li><a href="#tabs-2">Metric BMI</a></li>
+		</ul>
+		<div id="tabs-1">
+			  
+				<form id="signup1" class="size">
+					<div class="form-group">
+					<label for="feet" class="label col-xs-12 col-sm-12 col-md-8">Enter your height in feet:</label>
+					<input type="text" name="feet" id="feet" class="required number col-sm-2" title="Please enter in feet.">
+					</div>
+					<br>
+					<div class="form-group">
+					<label for="inches" class="label col-xs-12 col-sm-12 col-md-8">Enter your height in inches:</label>
+					<input type="text" name="inches" id="inches" class="required number col-sm-2" title="Please enter in inches.">
+					</div>
+					<br>
+					<div class="form-group">
+					<label for="pounds" class="label col-xs-12 col-sm-12 col-md-8">Enter in your weight:</label>
+					<input type="text" name="pounds" id="pounds" class="required number col-sm-2" title="Please enter your weight in pounds.">&nbsp;
+					</div>
+					<br>
+					<input type='submit' class="btn btn-danger center-block" value='Submit' name="submit" id='submitme'>
+				</form>	
+				<div id="results1">
+			</div>
+		</div><!-- tabs-1 -->
+		
+		<div id="tabs-2">
+					<form id="signup2" class="size">
+				<div class="form-group">
+				<label for="centimeters" class="label col-xs-12 col-sm-12 col-md-8">Enter your height in centimeters:</label>
+				<input type="text" name="centimeters" id="centimeters" class="required number col-sm-2" title="Please enter in centimeters.">&nbsp;
+				</div>
+				<br>
+				<div class="form-group">
+				<label for="kilograms" class="label col-xs-12 col-sm-12 col-md-8">Enter in your weight in kilograms:</label>
+				<input type="text" name="kilograms" id="kilograms" class="required number col-sm-2" title="Please enter your weight in kilograms.">&nbsp;
+				</div>
+				<br>
+				<input type='submit' class="btn btn-danger center-block" value='Submit' name="submit" id='submitme'>
+			</form>	
+			<div id="results2">
+		</div>
+		</div><!-- tabs-2 -->
+	</div>
+		
+			
+	</div>	
+		
+		
+	
+	
+<footer class="footercolor text-center">
+ 		<h2>Patricia Kay Parker</h2>
+ 	</footer>	
+</body>
+</html>

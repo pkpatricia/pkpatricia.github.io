@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2 a2_1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Patricia Parker">
+    <meta name="robots" content="noindex, nofollow">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+
+</head>
+<body>
+  <header class="jumbotron">
+     <img src="../sftwear.png" class="center-block">
+         
+     
+  </header>
+    <div class="container">
+    <h1 class="text-center">a2_1</h1> 
+    
+
+<script type="text/javascript">
+        // This is the area where the arrays are created.
+        
+        var messages = ["message1",
+                        "message2",
+                        "message3",
+                        "message4",
+                        "message5",
+                        "message6",
+                        "message7",
+                        "message8",
+                        "message9",
+                        "message10"];
+        
+        // Prompt user for number. Turn string into number and assign the remainder of the given number divided by 5 to 
+        // the variable choice.
+        var choice = (Number(prompt("Please enter a positive number.")) % 10);
+      
+        // Write a quote out to the page using the resulting remainder in the variable choice as the array index.
+        document.write('<h1 class="text-center">' + messages[choice] + '</h1>');
+        
+        
+    </script>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    background-color: #ff1d8e;
+    color: #252525;
+    padding: 3em;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h1, h2 {
+  font-style: italic;
+  font-family: 'Lobster', cursive;
+}
+
+.first {
+	color: mediumturquoise !important;
+	background: purple !important;
+	border: dotted orange thick !important;
+	font-size: 10px;
+}
+
+.second {
+	color: yellow !important;
+	background: aqua !important;
+	border: solid black thick !important;
+	font-style: bold !important;
+	font-size: 30px;
+	text-decoration: overline;
+}
+
+.third {
+	color: lawngreen !important;
+	background: orange !important;
+	text-decoration: underline;
+	font-family: 'Lobster', cursive;
+	font-size: 45px;
+	border: double purple thick !important;
+}
+
+.thirtythree {
+	width: 33.333%;
+	float: left;
+}
+.glyphicon-heart {
+    color: #ff1d8e;
+}
+
+#sect2 {
+	background:palevioletred;
+	color: darkblue;
+}
+
+#sect2 a {
+	color: deeppink;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.jumbotron, .panel, .headercolor, .footercolor {
+  background-image: url("../images/hearts_crop.jpg");
+  padding: 1em;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.size {
+    padding-bottom: 150px;
+    padding-top: 150px;
+}
+
+.container {
+  background: rgba(255,255,255,0.8);
+}

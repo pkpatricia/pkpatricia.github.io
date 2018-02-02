@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Patricia Parker">
+  <meta name="robots" content="noindex, nofollow">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script stype="text/javascript" rc="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+
+  <script type="text/javascript"> document.createElement( "picture" );</script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" class="picturefill" async="async"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script> -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+  
+  
+<script type="text/javascript">
+  $(function() {
+		
+		$("#signup").validate({
+                        submitHandler: function() {
+                            event.preventDefault();
+													var metersInCentimeters = Number($("#centimeters").val()) / 100;
+									
+													var height = Number(metersInCentimeters) * Number(metersInCentimeters);
+													
+													var bmi = Number($("#kilograms").val()) / Number(height);
+														
+													$("#results").html("<h2> Your BMI: </h2>" + bmi.toFixed(1));
+                           
+                        }
+                  });
+	});
+</script>		
+</head>
+	
+<body>
+<header class="headercolor">
+		<img src="../sftwearlogo2.png" class="center-block img-responsive"><br>
+	</header>
+	
+	<form id="signup" class="size">
+		<div class="form-group">
+		<label for="centimeters" class="label col-lg-11">Enter your height in centimeters:</label>
+		<input type="text" name="centimeters" id="centimeters" class="required number col-lg-1" title="Please enter in centimeters.">&nbsp;
+		</div>
+		<br>
+		<div class="form-group">
+		<label for="kilograms" class="label col-lg-11">Enter in your weight in kilograms:</label>
+		<input type="text" name="kilograms" id="kilograms" class="required number col-lg-1" title="Please enter your weight in kilograms.">&nbsp;
+		</div>
+		<br>
+		<input type="submit" class="btn btn-danger center-block" value="Submit" name="submit" id="submitme">
+	</form>	
+	<div id="results">
+                </div>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.downboy/1.2/jquery.downboy.auto.min.js"></script>
+  <a href="index.html">Home</a>              
+<footer class="footercolor">
+        <h2 class="text-center">Home</h2>
+        <p class="text-center"><a href="http://patriciakayparker.com/it411/index.html">
+            <img src="../../skull_pink_bow.png">
+            </a></p>
+    	<h2 class="text-center">Patricia Parker</h2>
+    </footer>
+</body>
+</html>

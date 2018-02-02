@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2 a2_3</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Patricia Parker">
+    <meta name="robots" content="noindex, nofollow">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+
+</head>
+<body>
+  <header class="jumbotron">
+     <img src="../sftwear.png" class="center-block">
+         
+     
+  </header>
+    <div class="container">
+    <h1 class="text-center">a2_3</h1> 
+   <script>
+    function input_numbers() {
+      var fav_nums = []
+	  //if the user hits cancel a null is returned.  When you use Number on null it returns a zero
+	  var promptValue = prompt("Please enter a favorite number or use cancel stop entering","");
+      while (promptValue !=null) {
+        fav_nums.push(Number(promptValue));
+		promptValue = prompt("Please enter a favorite number or use cancel stop entering","");
+      }
+      return fav_nums;
+    }
+
+    function product_nums(fav_nums) {
+      var prod = 1;
+      for (var index = 0; index < fav_nums.length; index++) {
+        prod *= fav_nums[index];
+      }
+      return prod;
+    }
+
+    var the_numbers = input_numbers();
+    var the_product = product_nums(the_numbers);
+       
+	if (the_numbers.length >0) {
+		document.write("<h1>The favorite numbers are " + the_numbers.join(", ") + "</h1>");
+        
+		document.write("<h1>The product of these numbers is " + the_product + ".</h1>");
+	}
+	else
+	{
+		document.write("<h1>There was no input.</h1>");
+	}
+  </script>
+  </div>    
+</body>
+</html>

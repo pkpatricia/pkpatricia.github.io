@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3 a3_3</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Patricia Parker">
+    <meta name="robots" content="noindex, nofollow">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      // initialize the words array.
+      var words = [];
+
+        
+      $("#enterword").click(function() {
+        var word = $("#word").val();
+          // while word entered is not the word end
+          if (word != "end") {
+            words.push(word);// Place word in array.
+            $("#word").val(""); // Clear the text field.
+            $("#word").focus();
+          }
+          // word entered is the word end
+          else {
+          
+            words.sort();// Sort the words array alphabetically.
+            // Print the sorted array of words.
+            $("#output").html('<h2 class="text-center">The sorted list of words is: ' + words.join(", ") + "</h2>");
+          
+          }
+      });
+
+
+    });
+  </script>
+</head>
+<body>
+  <header class="jumbotron">
+    <img src="../sftwear.png" class="center-block">
+  </header>
+  <h1 class="text-center">IT 411</h1>
+  <h1 class="text-center">a3_3</h1>
+  <hr>
+  <div class="text-center">
+     <p>Enter a word, then qlick this button. Enter in word "end" to quit.</p>
+      <input type="text" id="word" name="word">
+      <button id="enterword">Button</button>
+      <br>
+      
+  </div>
+  <div id="output"></div>
+  </body>
+</html>

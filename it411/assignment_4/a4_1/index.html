@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 4 a4_1</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Patricia Parker">
+  <meta name="robots" content="noindex, nofollow">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+  $(document).ready(function() {
+		 $("#highlight").click(function () {
+                if ($(this).text() == "highlight") {
+
+                    $('span.highlightable').each(function () {
+
+                        $(this).toggleClass('textHighlight');
+                        $("#highlight").text("Remove Highlighted Text");
+                    }); // end each		
+                } else {
+                    $('span.highlightable').each(function () {
+
+                        $(this).toggleClass('textHighlight');
+                        $("#highlight").text("highlight");
+                    }); // end each	
+
+
+                }
+
+     }); // end highlight function
+  
+  }); // end ready
+</script>
+</head>
+<body>
+  <header class="jumbotron">
+    <img src="../sftwearlogo2.png" class="center-block">
+  </header>
+  <div class="container">
+  <h1 class="text-center">a4_1</h1>
+  <hr>
+  <button id="highlight">highlight</button> 
+		<p>Oat cake brownie sugar plum cake jelly beans soufflé. Icing dessert apple pie tiramisu 		bonbon cotton candy cotton candy lollipop. Sweet roll croissant tootsie roll jelly cookie 		danish candy apple pie chocolate cake. <span class="highlightable">Soufflé gingerbread ice cream lollipop wafer. 					Tiramisu marshmallow chocolate bar halvah sesame snaps jujubes jujubes sugar plum. Sweet 			marshmallow chupa chups. </span>Cake sweet roll gummies icing dessert. Carrot cake chupa chups 			oat cake soufflé pastry halvah toffee sweet roll gingerbread. Cake pie gingerbread donut 			sweet cake icing. Bear claw cake pastry chocolate bar sesame snaps. Jelly-o powder jelly-o 		 bear claw bonbon macaroon gingerbread tiramisu. Pudding lollipop cupcake pastry brownie 			sesame snaps gummi bears. Sesame snaps topping cheesecake jelly dragée toffee.</p>
+		<p>Gummies soufflé chocolate cake sweet roll muffin toffee bonbon. Brownie cookie 						fruitcake powder cake cake wafer gummi bears tootsie roll. Dragée tootsie roll powder. 				Sweet sesame snaps chupa chups. <span class="highlightable">Gummies liquorice bear claw toffee cheesecake. Tiramisu 			cake toffee powder sesame snaps. Pie jelly-o marzipan pudding pastry jelly pie. Candy 				carrot cake cake tart chocolate bar halvah carrot cake. Lollipop wafer brownie pastry 				topping carrot cake icing. </span>Candy gingerbread marshmallow gingerbread gingerbread brownie 			tootsie roll. Chocolate bar liquorice bonbon chocolate pudding. Jelly cake pastry. 						Gingerbread dragée biscuit chocolate bar cake gingerbread liquorice.</p>
+  <hr>
+	</div>
+	</body>
+</html>	

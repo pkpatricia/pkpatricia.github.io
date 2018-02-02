@@ -1,0 +1,178 @@
+html { display: flex;}
+
+body {
+   
+    width: 100%;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    background-color: #ff1d8e;
+    color: #252525;
+}
+
+/*.sfooter {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sfooter-content {
+    flex: 1 0 auto;
+}*/
+
+.textHighlight {
+	background-color: aqua;
+}
+
+.image {
+	opacity: 0.5;
+}
+
+.addopacity {                                                   
+	opacity: 1.0;
+}
+
+#tabs {
+	background-color: lightpink;
+	border-radius: 6em;
+	border: double purple thick !important;
+	padding: 3em;
+	margin: 5em 1em;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h1, h2 {
+  font-style: italic;
+  font-family: 'Lobster', cursive;
+}
+
+.glyphicon-heart {
+    color: #ff1d8e;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.jumbotron, .panel, .headercolor, .footercolor {
+   
+	  background: #C5EAFE;
+}
+
+.footercolor {
+	position: absolute !important;
+	width: 100%;
+}
+
+.wrap {
+  min-height: calc(100vh - 63px);
+}
+
+ul {
+	list-style: none;
+	display: inline-block;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.size {
+    padding-bottom: 150px;
+    padding-top: 150px;
+}
+
+.container {
+  background: rgba(255,255,255,0.8) none repeat scroll 0% 0%;
+	position: relative;
+	padding: 1px 0px;
+	margin-top: -30px;
+}
+
+
+
+#diamond-narrow {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 70px solid red;
+  position: relative;
+  top: -50px;
+}
+#diamond-narrow:after {
+  content: '';
+  position: absolute;
+  left: -50px; top: 70px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid red;
+}
+
+#diamond {
+  width: 0;
+  height: 0;
+  border: 100px solid transparent;
+  border-bottom-color: pink;
+  position: relative;
+  top: -50px;
+}
+#diamond:after {
+  content: '';
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  width: 0;
+  height: 0;
+  border: 100px solid transparent;
+  border-top-color: pink;
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}

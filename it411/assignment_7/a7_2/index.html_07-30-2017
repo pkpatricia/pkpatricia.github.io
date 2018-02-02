@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Patricia Parker">
+  <meta name="robots" content="noindex, nofollow">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+   <!-- needed for real data validation -->
+   <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+  <script>
+		// this is the shortcut notation for document ready	
+	$(function() {
+		
+		$('#signup').validate({
+                        submitHandler: function() {
+                            event.preventDefault();
+                            $('#results').html("<h2>Your Answers:</h2><p><strong>Name: </strong>" + $("#name").val() + "<br><strong>Today is: </strong>" + $("#thedate").val() + "<br><strong>Age: </strong>" + $("#theage").val() + "<br><strong>URL: </strong>" + $("#theurl").val() + "<br><strong>Email: </strong>" + $("#theemail").val() )
+                        }
+                  });
+		
+		
+		
+		
+		
+		
+//		$('#result').submit(function () {
+//		document.write('Your name is ' + $("#name").val() 
+//			+ 'The date is ' + $("#thedate").val() + 'Your age is ' + $("#theage").val()
+//									+ 'Your website URL is ' + $("#theurl").val() + 'Your email is ' + $("#theemail").val());
+//			event.preventDefault();
+//		});
+	 }); // end ready
+  </script>
+	</head>
+	
+	<body>
+	<header class="headercolor">
+		<img src="../sftwearlogo2.png" class="center-block img-responsive"><br>
+	</header>
+	
+		<form id="signup" class="size">
+<div class="form-group">
+<label for="name" class="label col-sm-2">Enter your name:</label>
+<input type"text" name="name" id="name" class="required col-sm-3" title="Please give us your name.">&nbsp;
+</div>
+<br>
+<div class="form-group">
+<label for="thedate" class="label col-sm-2">Enter today's date:</label>
+<input type="text" name="thedate" id="thedate" class="required date col-sm-3" title="Please enter today's date in the format 01/28/2014.">&nbsp;
+</div>
+<br>
+<div class="form-group">
+<label for="theage" class="label col-sm-2">Enter your age:</label>
+<input type="text" name="theage" id="theage" class="required digits col-sm-3" title="Please give us your age.">&nbsp;
+</div>
+<br>
+<div class="form-group">
+<label for="theurl" class="label col-sm-2">Enter your web site:</label>
+<input type"text" name="theurl" id="theurl" class="required url col-sm-3" title="Please enter your website address.">&nbsp;
+</div>
+<br>
+<div class="form-group">
+<label for="theemail" class="label col-sm-2">Enter your email:</label>
+<input type"text" name="theemail" id="theemail" class="required email col-sm-3" title="Please enter your email address.">&nbsp;
+</div>
+<br>
+ <input type='submit' class="btn btn-danger center-block" value='Submit' name="submit" id='submitme'>
+ 
+ </form>
+
+                 <div id="results">
+                </div>
+ <footer class="footercolor text-center">
+ 		<h2>Patricia Kay Parker</h2>
+ 	</footer>
+</body>
+</html>

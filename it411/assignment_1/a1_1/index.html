@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <script>
+    
+    var dateInput = prompt("Please enter your birthdate","1/24/2000");
+	//alert(dateInput);
+	var today = new Date();
+	//alert(today);
+	
+	var theDate = new Date(dateInput);
+	
+    var age = (today.getFullYear() - theDate.getFullYear());    
+	var outputYear = "<h1>You are: " + age + " years old.</h1>";
+	document.write(outputYear);
+	
+	
+
+    
+    
+    
+    </script>
+</body>
+</html>

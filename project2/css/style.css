@@ -1,0 +1,82 @@
+body {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 18px;
+    background-image: url("../images/purple_background.jpg");
+    color: #252525;
+}
+
+.pageWrapper {
+    width: 960px;
+    margin: 6em auto;
+    padding: 0.5em;
+    overflow: auto;
+    background-color: #fafafa;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.author {
+    font-style: italic;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.third {
+    width: 32.2%;
+    float: left;
+    overflow: auto;
+    margin: .2em;
+}
+
+.collegefont{
+  color: #a020f0;
+  background-color: #252525;
+  padding: .3em;
+  margin: .1em;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  text-align: center;
+}
+
+.fa {
+    font-size: 2.3em;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.headercolor, .footercolor, .subject {
+    background-color: #a020f0;
+    padding: 1em;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.space {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}

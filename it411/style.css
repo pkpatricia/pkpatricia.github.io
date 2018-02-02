@@ -1,0 +1,62 @@
+body {
+    
+    max-height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    
+
+}
+
+/***
+* Flexbox Sticky Footer
+* http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+***/
+
+/*corrects IE min-height bug
+html { display: flex;}
+body { width: 100%;} */
+
+.sfooter {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sfooter-content {
+    flex: 1 0 auto;
+}
+
+
+.bgimg {
+    
+    background-image: url(pink_background.svg);
+    
+    background-size: 100%;
+   
+}
+
+#myelement
+{
+	
+    
+    color:hotpink;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #ff007f;
+    background-color: whitesmoke;
+}
+
+
+.center {
+    text-align: center;
+}
+
+
+@media all and (max-width: 460px) {
+    img {
+        display:none;
+    }
+}

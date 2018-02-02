@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 4 a4_2</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Patricia Parker">
+  <meta name="robots" content="noindex, nofollow">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+        $(document).ready(function () {
+
+            //
+            //Define array and message
+            //
+            var messageArray = [
+							"Never",
+							"eat",
+							"corn on the cob",
+							"with",
+							"strangers",
+							"because",
+							"it",
+							"can",
+							"get",
+							"messy."]; // end array
+						// print first message
+						var i=0;
+						$("#message").html(messageArray[i] + "<br>");
+						i++;	
+    
+
+            $('body').keypress(function () {
+							
+					        // print next message
+                	$("#message").html(messageArray[i] + "<br>");
+									i++;
+							
+							    // if i = 10 then cycle through messages again.
+                	if (i > 9) {
+                    i = 0;
+                		}
+							
+									
+            }); // end keypress
+
+				}); // end ready
+    </script>
+
+</head>
+<body>
+  <header class="jumbotron">
+    <img src="../sftwearlogo2.png" class="center-block">
+  </header>
+  <div class="container">
+  
+  <h1 class="text-center">a4_2 Words to live by...</h1> 
+  <hr>
+  
+  <h2 id="message" class="text-center"></h2>
+
+	</div>
+	</body>
+</html>	

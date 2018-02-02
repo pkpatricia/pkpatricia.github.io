@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<link rel="shortcut icon" type="image/png" href="../../../images/skull_pink_bow.png">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+
+  <script> document.createElement( "picture" ); </script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" class="picturefill" async="async"></script>
+  
+  <script>
+		// this is the shortcut notation for document ready	
+	$(function() {
+	
+	                    // On focus get ride of the default value
+                    $(':text').focus(function() {
+                        //console.log('got focus');
+                        var field = $(this);
+                        //Text fields have an attribute called defaultValue, which represents the text inside the field when the page first loads. 			
+                        if (field.val()==field.prop('defaultValue')) { 
+                            field.val(''); 
+                        } 
+                    }); 
+
+                    $(':text').blur(function() {
+                        //console.log('got focus');
+                        var field = $(this);
+                        //Text fields have an attribute called defaultValue, which represents the text inside the field when the page first loads. 			
+                        if (field.val().trim().length == 0) { 
+                            field.val(field.prop('defaultValue'));				
+                        } 
+                    }); 
+					
+
+		
+		
+		
+		            $("#signup").submit(function () {
+
+                if ($(".getinput1").val() == '' || $(".getinput1").val() == $(".getinput1").prop('defaultValue')) { // Check if input is blank or default value
+
+                    alert("First name cannot be blank.  Please enter your first name."); // Alert display on blank submission
+                    event.preventDefault(); // Stops opening of new webpage if submission is blank
+					}
+					
+                if ($(".getinput2").val() == '' || $(".getinput2").val() == $(".getinput2").prop('defaultValue')) { // Check if input is blank or default value
+
+                    alert("Middle name cannot be blank.  Please enter your middle name."); // Alert display on blank submission
+                    event.preventDefault(); // Stops opening of new webpage if submission is blank
+                }
+				
+				if ($(".getinput3").val() == '' || $(".getinput3").val() == $(".getinput3").prop('defaultValue')) { // Check if input is blank or default value
+
+                    alert("Last name cannot be blank.  Please enter your last name."); // Alert display on blank submission
+                    event.preventDefault(); // Stops opening of new webpage if submission is blank
+                }
+				else { // Input is valid so an alert window displays location
+
+                    alert ('Your name is ' + $(".getinput1").val() + " " + $(".getinput2").val() + " " + $(".getinput3").val()); // Provides feedback and stops new page from loading so on-page display of input can be seen
+                }
+            }); // end input check and display
+		}); // end ready
+  </script>
+</head>
+	
+<body class="sfooter">
+<div class="sfooter-content">
+<div class="wrap">   
+	<header class="jumbotron">
+		<p><picture><img srcset="../../../images/skull_7.svg" class="center-block" width="40%"></picture></p>
+
+	</header>
+	<div>
+	<form id="signup"  class="size" action="http://patriciakayparker.com/it411"><br>
+	<div class="form-group">
+			
+				<label for="getinput1" class="label col-sm-2">First Name:</label>
+				<input type="text" value="First name" name="getinput1" class="getinput1 col-sm-2"> 
+		
+		</div>
+		<br>
+		
+		<div class="form-group">
+				
+				<label for="getinput2" class="label col-sm-2">Middle Name:</label>
+				<input type="text" value="Middle name" name="getinput2" class="getinput2 col-sm-2"> 
+		</div>
+		<br>
+		
+		<div class="form-group">
+				<label for="getinput3" class="label col-sm-2">Last Name:</label>
+				<input type="text" value="Last name" name="getinput3" class="getinput3 col-sm-2">
+		</div> 
+		<br>
+		
+		<!-- note the type below is submit not button.  If submit is failing to fire make sure you used submit -->
+		<div class="form-group">
+			
+				<input type='submit' class="btn btn-danger center-block" value='Submit' name="submit" id='submitme'>
+			
+		</div>
+		</form>
+	</div>	
+ 	
+ 	</div> 
+ 	</div>    
+ 	<footer class="footercolor">
+        <h2 class="text-center">Home</h2>
+        <p class="text-center"><a href="http://patriciakayparker.com/it411/index.html">
+            <picture><img srcset="../../../images/skull_7.svg" width="15%"></picture>
+            </a></p>
+    	<h2 class="text-center">Patricia Parker</h2>
+    </footer>
+</body>
+</html>

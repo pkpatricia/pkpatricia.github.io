@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 5 a5_1</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Patricia Parker">
+  <meta name="robots" content="noindex, nofollow">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $(".image").mouseenter(function() {
+        $(this).stop().animate(
+					{
+						width: '500px',
+						height: '400px'
+					},
+					3000,
+					'easeInSine'); // end animate
+      });  // end mouseenter
+			
+		
+
+      	$(".image").mouseleave(function() {
+        $(this).stop().animate(
+					{
+						width: '250px',
+						height: '200px'
+					},
+					1000,
+					'easeOutBounce');
+      	}); // end mouseleave
+			
+			}); // end ready
+
+	 
+  </script>
+ </head>
+
+<body>
+  <header class="jumbotron">
+   <img src="../../../skull.png" class="center-block img-responsive">
+  </header>
+  
+  	<h1 class="text-center">a5_1</h1>
+  	<hr>
+    <h2 class="text-center">Gallery of images</h2>
+    <img class="image center-block" src="../messages/message1.jpg" height="200px" width="250px"><br>
+    <img class="image center-block" src="../messages/message2.jpg" height="200px" width="250px"><br>
+    <img class="image center-block" src="../messages/message3.jpg" height="200px" width="250px"><br>
+    <img class="image center-block" src="../messages/message4.jpg" height="200px" width="250px"><br>
+   
+   <footer class="footercolor">
+        <h2 class="text-center">Home</h2>
+        <p class="text-center"><a href="http://patriciakayparker.com/it411/index.html">
+            <img class="img-responsive" src="../../../skull_pink_bow.png">
+            </a></p>
+    	<h2 class="text-center">Patricia Parker</h2>
+    </footer>
+</body>
+</html>
